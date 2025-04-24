@@ -10,15 +10,40 @@ import GraphicDesign from './pages/graphicDesigner'
 import MultiMedia from './pages/multimediaMarketing'
 import Projects from './pages/projects'
 import Footer from './pages/footer'
+import videoBack from './assets/test.mov'
+
+
+const overlayText = [
+  {
+    text: 'WELCOME',
+    className: 'text-4xl ml-[10%] -mb-10 mt-10 text-[250px] text-[#DC065F]',
+  },
+  {
+    text: 'To my',
+    className: 'text-4xl ml-[10%] font-bold text-[100px] text-[#DC065F]',
+  },
+  {
+    text: '(personal)',
+    className: 'text-4xl ml-[10%] font-extralight italic text-[100px] text-[#FFE0E0]',
+  },
+  {
+    text: 'PORTFOLIO',
+    className: 'text-4xl ml-[5%] mb-5 text-[250px] font-Inder text-[#DC065F]',
+  },
+];
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
       <NavBar />
       <div>
-        <BackgroundVideo />
+      <BackgroundVideo
+      src={videoBack}
+      lines={overlayText}
+      overlayContainerClass="absolute top-5 left-5 grid grid-cols-1"
+    />
       </div>
       <Hero />
       <GraphicDesign />

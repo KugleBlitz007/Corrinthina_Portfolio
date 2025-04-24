@@ -33,7 +33,7 @@ export default function NavBar() {
     >
       <ul className="text-xl flex justify-center tracking-widest">
         <li className="md:px-6 px-4 border-black">
-          <Link to="/" className="hover:text-[#c44587]">I am a graphic designer</Link>
+          <Link to="/GraphicPage" className="hover:text-[#c44587]">I am a graphic designer</Link>
         </li>
         <li className="md:px-6 px-4 border-black">
           <Link to="/Blogs" className="hover:text-[#c44587]">I am a multimedia digital marketing specialist</Link>
