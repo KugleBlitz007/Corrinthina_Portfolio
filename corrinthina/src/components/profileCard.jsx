@@ -1,39 +1,69 @@
-import {FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { IoMdMail } from "react-icons/io";
 import React from 'react';
-import coco from '../assets/coco.jpg'
+import coco from '../assets/coco.jpg'; // You can replace this with actual dynamic imports or props
+import { Link } from 'react-router-dom';
 
-export default function ProfileCard() {
+export const cards = [
+  {
+    id: 1,
+    image: coco,
+    title: 'Algae Cooking Club',
+    subtitle: 'Art Direction, Brand Identity',
+    filters: ['Art Direction', 'Brand Identity'],
+    images: [coco, coco, coco],
+    link: 'brand1'
+  },
+  {
+    id: 2,
+    image: coco,
+    title: 'V8—Space',
+    subtitle: 'Creative Direction, Art Direction',
+    filters: ['Creative Direction', 'Art Direction'],
+    images: [coco, coco],
+    link: 'brand2'
+  },
+  {
+    id: 3,
+    image: coco,
+    title: 'Maude Campaign',
+    subtitle: 'Creative Direction, Art Direction',
+    filters: ['Campaign', 'Art Direction'],
+    images: [coco, coco],
+    link: 'brand3'
+  },
+  {
+    id: 4,
+    image: coco,
+    title: 'Press Play',
+    subtitle: 'Art Direction',
+    filters: ['Art Direction'],
+    images: [coco, coco],
+    link: 'brand4'
+  },
+];
+
+const CardGrid = ({ activeFilter }) => {
+  const filteredCards =
+    activeFilter === 'All Projects'
+      ? cards
+      : cards.filter((card) => card.filters.includes(activeFilter));
+
   return (
-    <div className="h-[75vh] relative rounded-2xl shadow-md w-full max-w-xs text-center overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${coco})` }}
-      />
-
-      {/* Gradient overlay */}
-      <div className="absolute bottom-0 w-full h-full bg-[#c44587]/50" />
-
-      {/* Content */}
-      <div className="relative z-10 p-6 h-full flex flex-col justify-end">
-        <h4 className="text-sm text-gray-200 tracking-widest uppercase mb-1">Here</h4>
-        <h2 className="text-xl font-bold text-white mb-2">Here</h2>
-        <p className="text-gray-100 text-sm mb-4 leading-relaxed">
-          Here
-        </p>
-        <div className="flex justify-center gap-4">
-          <a href='' className="text-white hover:text-pink-300">
-            <IoMdMail />
-          </a>
-          <a href='' className="text-white hover:text-pink-300">
-            <FaLinkedin />
-          </a>
-          <a href=''className="text-white hover:text-pink-300">
-            <FaInstagram />
-          </a>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
+      {filteredCards.map((card) => (
+        <div key={card.id}>
+          <Link to={`/${card.link}`}>
+          <img
+            src={card.image}
+            alt={card.title}
+            className="rounded-md aspect-square object-cover"
+          />
+          <p className="mt-4 text-xl font-light">{card.title}</p>
+          <p className="text-gray-600">{card.subtitle}</p>
+          </Link>
         </div>
-      </div>
+      ))}
     </div>
   );
-}
+};
+
+export default CardGrid;

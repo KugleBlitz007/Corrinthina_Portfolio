@@ -1,76 +1,32 @@
-import React from "react";
-import coco from "../assets/coco.jpg";
+import { useParams } from 'react-router-dom';
 
-function Hero() {
+export default function ProjectPage() {
+  const { slug } = useParams();
+  const project = cards.find((c) => c.slug === slug);
+
+  if (!project) return <div className="text-center text-xl mt-10">Project not found</div>;
+
   return (
-    <header className="bg-[#FF9696] p-8">
-        <h1 className="mb-10 text-6xl !leading-tight text-[#DC065F] font-bold flex justify-center">
-            I am a graphic designer
-        </h1>
+    <div className="bg-white min-h-screen">
+      <h1 className="text-5xl md:text-8xl font-bold w-full text-center py-20">
+        {project.title}
+      </h1>
 
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-3">
-        <div className="">
-            <img
-            src={coco}
-            alt="team work"
-            className="rounded-md aspect-square object-cover"
-            />
-
-            <p className="mt-5 text-black text-2xl font-light pr-28">
-            Subheading
-            </p>
-
-            <p className="text-[#828282] text-2xl font-light pr-28">
-            Body text for whatever you’d like to expand on the main point. 
-            </p>
-        </div>
-
-        <div className="">
-            <img
-            src={coco}
-            alt="team work"
-            className="rounded-md aspect-square object-cover"
-            />
-
-            <p className="mt-5 text-black text-2xl font-light pr-28">
-            Subheading
-            </p>
-
-            <p className="text-[#828282] text-2xl font-light pr-28">
-            Body text for whatever you’d like to expand on the main point. 
-            </p>
-        </div>
-
-        <div className="">
-            <img
-            src={coco}
-            alt="team work"
-            className="rounded-md aspect-square object-cover"
-            />
-
-            <p className="mt-5 text-black text-2xl font-light pr-28">
-            Subheading
-            </p>
-
-            <p className="text-[#828282] text-2xl font-light pr-28">
-            Body text for whatever you’d like to expand on the main point. 
-            </p>
-        </div>
-        
-        
+      <div className="flex flex-wrap">
+        {project.images.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`${project.title} ${idx}`}
+            className={`${
+              // Conditional layout
+              img.width > img.height
+                ? 'w-full h-[60vh]'
+                : 'w-1/2 h-[60vh]'
+            } object-cover`}
+          />
+        ))}
       </div>
-
-      <div className="flex justify-center mt-10">
-      <a
-            href="#AboutMe" // Update this with the correct route or section
-            className=" text-white text-2xl font-light px-4 py-2 rounded-lg bg-black inline-block"
-          >
-            Click to see more
-          </a>
-
-        </div>
-    </header>
+    </div>
   );
 }
-
-export default Hero;

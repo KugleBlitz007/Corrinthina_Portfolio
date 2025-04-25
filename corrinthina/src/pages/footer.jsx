@@ -3,27 +3,27 @@ import { FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export default function ContactUs() {
   return (
-    <footer  className="bg-[#DC065F] px-4 md:px-16 lg:px-28 py-8">
-        <div className=" pt-6 text-white text-center mt-6 hover:text">
-            <p>email : corrinthina@outlook.com</p>
+    <footer id="Contact" className="bg-[#DC065F] px-4 md:px-16 lg:px-28 py-8">
+        <div className=" pt-6 text-white text-center mt-6 hover:text-amber-300">
+            <p><a href="mailto:corrinthina@outlook.com">email : corrinthina@outlook.com</a></p>
         </div>
 
         <div className="flex flex-row justify-center mt-6 place-items-stretch">
 <div className="mx-3">
-                <a href="https://www.linkedin.com/in/johannrajosefa/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin className="text-lg text-white hover:text-amber-300" />
+                <a href="https://www.linkedin.com/in/corrinthina/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-lg text-white hover:text-blue-500" />
                 </a>
             
 </div>
             <div className="mx-3">
-                <a href="https://twitter.com/JohannRajosefa" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram className="text-lg text-white hover:text-amber-300" />
+                <a href="https://www.instagram.com/corrinthina/" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-lg text-white hover:text-[#FEDA77]" />
                 </a>
             </div>
 
             <div className="mx-3">
                 <a href="https://www.youtube.com/@JohannRajosefa" target="_blank" rel="noopener noreferrer">
-                    <FaYoutube className="text-lg text-white hover:text-amber-300" />
+                    <FaYoutube className="text-lg text-white hover:text-red-500" />
                 </a>
             </div>
 
