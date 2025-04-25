@@ -4,11 +4,16 @@ const BackgroundMedia = ({ src, lines = [], overlayContainerClass = '', overlayC
   const isVideo = src.match(/\.(mp4|webm|ogg|mov)$/i);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-screen">
       {/* Background Media */}
       {isVideo ? (
         <video
-          className="w-full bg-cover object-contain"
+          className=" 
+            w-full h-screen 
+            object-cover 
+            object-center 
+            md:object-top 
+            md:aspect-video"
           src={src}
           autoPlay
           loop

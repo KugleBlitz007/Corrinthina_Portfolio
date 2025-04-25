@@ -16,19 +16,35 @@ import videoBack from './assets/test.mov'
 const overlayText = [
   {
     text: 'WELCOME',
-    className: 'text-4xl ml-[10%] -mb-10 mt-10 text-[250px] text-[#DC065F]',
+    className: 'md:ml-[10%] -mb-[50vw] sm:-mb-[10vw] md:-mb-[3vw] mt-[15vw] md:-mt-[3vw] text-[17vw] text-[#DC065F]',
   },
   {
     text: 'To my',
-    className: 'text-4xl ml-[10%] font-bold text-[100px] text-[#DC065F]',
+    className: ' sm:-mb-[10vw] ml-[10%] md:-mb-0 font-bold text-[8vw] text-[#DC065F]',
   },
   {
     text: '(personal)',
-    className: 'text-4xl ml-[10%] font-extralight italic text-[100px] text-[#FFE0E0]',
+    className: ' ml-[10%] sm:-mb-[200vw] sm:-mb-[0vw] md:-mb-0 font-extralight italic text-[8vw] text-[#FFE0E0]',
   },
   {
     text: 'PORTFOLIO',
-    className: 'text-4xl ml-[5%] mb-5 text-[250px] font-Inder text-[#DC065F]',
+    className: 'md:ml-[9%] -mb-[3vw] -mt-[10vw] sm:-mt-[1vw] md:-mt-[2vw] text-[16vw] text-[#DC065F]',
+  },
+  {
+    text: '',
+    className: 'sm:hidden md:ml-[9%] -mb-[3vw] -mt-[10vw] sm:-mt-[1vw] md:-mt-[2vw] text-[16vw] text-[#DC065F]',
+  },
+  {
+    text: '',
+    className: 'sm:hidden md:ml-[9%] -mb-[3vw] -mt-[10vw] sm:-mt-[1vw] md:-mt-[2vw] text-[16vw] text-[#DC065F]',
+  },
+  {
+    text: '',
+    className: 'sm:hidden md:ml-[9%] -mb-[3vw] -mt-[10vw] sm:-mt-[1vw] md:-mt-[2vw] text-[16vw] text-[#DC065F]',
+  },
+  {
+    text: '',
+    className: 'sm:hidden md:ml-[9%] -mb-[3vw] -mt-[10vw] sm:-mt-[1vw] md:-mt-[2vw] text-[16vw] text-[#DC065F]',
   },
 ];
 
@@ -42,7 +58,7 @@ function App() {
       <BackgroundVideo
       src={videoBack}
       lines={overlayText}
-      overlayContainerClass="absolute top-5 left-5 grid grid-cols-1"
+      overlayContainerClass="top-5 left-5 grid grid-cols-1"
     />
       </div>
       <Hero />
