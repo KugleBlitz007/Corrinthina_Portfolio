@@ -55,7 +55,7 @@ const CardGrid = ({ activeFilter }) => {
           <img
             src={card.image}
             alt={card.title}
-            className="rounded-md aspect-square object-cover"
+            className=" aspect-square object-cover"
           />
           <p className="mt-4 text-xl font-light">{card.title}</p>
           <p className="text-gray-600">{card.subtitle}</p>
