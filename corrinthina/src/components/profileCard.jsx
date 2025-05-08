@@ -2,6 +2,7 @@ import React from 'react';
 import coco from '../assets/coco.jpg'; // You can replace this with actual dynamic imports or props
 import { Link } from 'react-router-dom';
 
+
 export const cards = [
   {
     id: 1,
@@ -24,9 +25,9 @@ export const cards = [
   {
     id: 3,
     image: coco,
-    title: 'Maude Campaign',
-    subtitle: 'Creative Direction, Art Direction',
-    filters: ['Campaign', 'Art Direction'],
+    title: 'Lissa Moore Article',
+    subtitle: 'Articles',
+    filters: ['Articles'],
     images: [coco, coco],
     link: 'brand3'
   },
@@ -51,7 +52,7 @@ const CardGrid = ({ activeFilter }) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
       {filteredCards.map((card) => (
         <div key={card.id}>
-          <Link to={`/${card.link}`}>
+          <Link to={`/${card.link}`} onClick={handleLinkClick}>
           <img
             src={card.image}
             alt={card.title}
@@ -67,3 +68,7 @@ const CardGrid = ({ activeFilter }) => {
 };
 
 export default CardGrid;
+
+const handleLinkClick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};

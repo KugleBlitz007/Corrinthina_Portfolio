@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 import '../index.css';
 import { FaHome } from "react-icons/fa";
 
+const handleLinkClick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 export default function NavBar({ className = '', linkClassName = '' }) {
   return (
     <nav className={`transition-transform duration-300 text-white sticky top-0 z-50 bg-[#DC065F] backdrop-blur-md ${className}`}>
       <div className="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
         
-          <Link to="/"> <FaHome className={`text-black hover:text-white text-2xl ${linkClassName}`}/> </Link>
+          <Link to="/" onClick={handleLinkClick}> <FaHome className={`text-black hover:text-white text-2xl ${linkClassName}`}/> </Link>
         
 {/*         <h1 className="text-lg font-bold tracking-widest text-black">INSIDE FASHION</h1>
  */}
