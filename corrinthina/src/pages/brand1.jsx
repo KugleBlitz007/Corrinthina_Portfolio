@@ -189,7 +189,7 @@ export default function brand1() {
       <img
         src={img.src}
         alt={img.alt || 'Image'}
-        className=" border-2 border-black/30 md:h-[50vw]"
+        className=" border-2 border-[#8a1c1c] md:h-[50vw]"
       />
     </a>
   ))}
@@ -213,7 +213,7 @@ export default function brand1() {
       <img
         src={img.src}
         alt={img.alt || 'Image'}
-        className="object-cover border-2 border-black/30 md:h-[65vw]"
+        className="object-cover border-2 border-[#8a1c1c] md:h-[65vw]"
       />
     </a>
   ))}

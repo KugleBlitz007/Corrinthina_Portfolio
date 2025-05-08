@@ -15,9 +15,9 @@ export const cards = [
   {
     id: 2,
     image: coco,
-    title: 'V8—Space',
-    subtitle: 'Creative Direction, Art Direction',
-    filters: ['Creative Direction', 'Art Direction'],
+    title: 'Malou',
+    subtitle: 'Brand Identity',
+    filters: ['Brand Identity'],
     images: [coco, coco],
     link: 'brand2'
   },
