@@ -34,9 +34,9 @@ export const cards = [
   {
     id: 4,
     image: coco,
-    title: 'Press Play',
-    subtitle: 'Art Direction',
-    filters: ['Art Direction'],
+    title: 'Inside Fashion',
+    subtitle: 'Brand Identity, Articles',
+    filters: ['Brand Identity', 'Articles'],
     images: [coco, coco],
     link: 'brand4'
   },
