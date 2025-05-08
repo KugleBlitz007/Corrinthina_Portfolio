@@ -11,11 +11,14 @@ function Hero() {
           </h1>
 
           <p className="mb-10 text-white text-2xl font-light ">
-          Body text for whatever you’d like to expand on the main point. 
-          Body text for whatever you’d like to expand on the main point. 
-          Body text for whatever you’d like to expand on the main point. 
-          Body text for whatever you’d like to expand on the main point. 
-          Body text for whatever you’d like to expand on the main point. 
+          a recent graduate and former marketing and communication intern.
+          It all started with a personal project where I wanted to create the best content possible on the internet.
+          <br></br>
+          <br></br>
+          My passion led me to <span className="font-bold">explore cinematography, social media, and digital creation.</span> 
+          I took numerous online courses and constantly looking for tips to refine my skills. 
+          This helped me to develop my <span className="font-bold">graphic design, content creation</span> (photography, videography, copywriting),
+          <span className="font-bold">community management, data analysis, and project management</span> knowledge.
           </p>
 
           <a

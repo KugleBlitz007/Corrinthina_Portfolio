@@ -6,9 +6,9 @@ export const cards = [
   {
     id: 1,
     image: coco,
-    title: 'Algae Cooking Club',
-    subtitle: 'Art Direction, Brand Identity',
-    filters: ['Art Direction', 'Brand Identity'],
+    title: 'Giving Day',
+    subtitle: 'Campaign',
+    filters: ['Campaign'],
     images: [coco, coco, coco],
     link: 'brand1'
   },

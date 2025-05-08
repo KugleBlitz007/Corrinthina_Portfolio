@@ -3,12 +3,10 @@ import CardGrid from './profileCard';
 
 const filters = [
   'All Projects',
-  'Art Direction',
   'Brand Identity',
-  'Creative Direction',
   'Campaign',
-  'Editorial',
   'Packaging',
+  'Articles', 
 ];
 
 const FilterGallery = () => {

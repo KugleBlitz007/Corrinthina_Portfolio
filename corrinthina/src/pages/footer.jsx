@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-export default function ContactUs() {
+export default function ContactUs({ className = '', linkClassName = '' }) {
   return (
-    <footer id="Contact" className="bg-[#DC065F] px-4 md:px-16 lg:px-28 py-8">
+    <footer id="Contact" className={`bg-[#DC065F] px-4 md:px-16 lg:px-28 py-8 ${className}`}>
         <div className=" pt-6 text-white text-center mt-6 hover:text-amber-300">
             <p><a href="mailto:corrinthina@outlook.com">email : corrinthina@outlook.com</a></p>
         </div>
