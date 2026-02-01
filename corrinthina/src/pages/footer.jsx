@@ -5,7 +5,7 @@ export default function ContactUs({ className = '', linkClassName = '' }) {
   return (
     <footer id="Contact" className={`bg-[#DC065F] px-4 md:px-16 lg:px-28 py-8 ${className}`}>
         <div className={` pt-6 text-white text-center mt-6 hover:text-amber-300 ${linkClassName}`}>
-            <p><a href="mailto:corrinthina@outlook.com">email : corrinthina@outlook.com</a></p>
+            <p><a href="mailto:corrinthina@gmail.com">email : corrinthina@gmail.com</a></p>
         </div>
 
         <div className="flex flex-row justify-center mt-6 place-items-stretch">
