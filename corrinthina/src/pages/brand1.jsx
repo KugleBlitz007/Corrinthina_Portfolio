@@ -161,7 +161,7 @@ export default function brand1() {
 
 <a
       key={3}
-      href={"https://secure.campaigner.com/csb/Public/show/ch5l-2wto9q--19ir8b-jes96135"}
+      href={"https://telfer.uottawa.ca/en/telfer-knowledge-hub/experiential-learning/giving-day-2025"}
       target="_blank"
       rel="noopener noreferrer"
       className="block"
